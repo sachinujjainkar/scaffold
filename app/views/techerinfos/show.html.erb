@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @techerinfo.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @techerinfo.address %>
+</p>
+
+<%= link_to 'Edit', edit_techerinfo_path(@techerinfo) %> |
+<%= link_to 'Back', techerinfos_path %>

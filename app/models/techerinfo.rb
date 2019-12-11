@@ -1,0 +1,2 @@
+class Techerinfo < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module TecherinfosHelper
+end
