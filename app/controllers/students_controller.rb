@@ -1,15 +1,13 @@
 class StudentsController < ApplicationController
 
-def index
-
-end
-
+   
 before_action :set_student, only: [:show, :edit, :update, :destroy]
-
-  # GET /techerinfos
+ # GET /techerinfos
   # GET /techerinfos.json
   def index
-    @student = Student.all
+    
+        @student = Student.all
+        #railbyebug
   end
 
   # GET /techerinfos/1
@@ -46,7 +44,7 @@ before_action :set_student, only: [:show, :edit, :update, :destroy]
   # PATCH/PUT /techerinfos/1
   # PATCH/PUT /techerinfos/1.json
   def update
-    respond_to do |format|
+       respond_to do |format|
       if @student.update(student_params)
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
@@ -55,6 +53,8 @@ before_action :set_student, only: [:show, :edit, :update, :destroy]
         format.json { render json: @student.errors, status: :unprocessable_entity }
       end
     end
+
+    
   end
 
   # DELETE /studnet/1
@@ -78,10 +78,5 @@ before_action :set_student, only: [:show, :edit, :update, :destroy]
     def student_params
       params.require(:student).permit(:name, :address)
     end
-
-
-
-
-
 
 end
